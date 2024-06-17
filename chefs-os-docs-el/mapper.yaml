@@ -1,0 +1,10 @@
+#This file contains the mapping of documents path in the CHEFS form to the documents path in the OS(Object Store) directory.
+
+root: ${{date}} # The root directory in the OS(Object Store) where the documents will be stored. store for each date in this case.
+subRoot: ${{submissionId}} # The subRoot directory in the OS(Object Store) where the documents will be stored. store for each submissionId in this case.
+mappings: # Recursively map each document from the CHEFS form to the OS(Object Store) directory.
+  - chefsPath: ReceivingSiteLocationMap # The path of the document in the CHEFS form, from the root.
+    osPath: /docs/ # The path of the document in the OS(Object Store) directory, from the root.
+  - chefsPath: /docs/coverLetter/
+    osPath: /docs/coverLetter/
+
